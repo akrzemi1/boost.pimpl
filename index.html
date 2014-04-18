@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 <title>Chapter&#160;1.&#160;The Boost Pimpl Library 1.0</title>
 <link rel="stylesheet" href="boostbook.css" type="text/css">
-<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Chapter&#160;1.&#160;The Boost Pimpl Library 1.0">
 <link rel="next" href="the_boost_pimpl_library/getting_started.html" title="Getting Started">
 </head>
@@ -27,7 +27,7 @@
 </div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
-<dl>
+<dl class="toc">
 <dt><span class="section"><a href="index.html#the_boost_pimpl_library.introduction">Introduction</a></span></dt>
 <dt><span class="section"><a href="the_boost_pimpl_library/getting_started.html">Getting Started</a></span></dt>
 <dt><span class="section"><a href="the_boost_pimpl_library/pimpl_with_value_semantics.html">Pimpl
@@ -36,7 +36,8 @@
     Interface</a></span></dt>
 <dt><span class="section"><a href="the_boost_pimpl_library/implementation_management.html">Implementation
     Management</a></span></dt>
-<dt><span class="section"><a href="the_boost_pimpl_library/pimpl__null__.html">Pimpl::null()</a></span></dt>
+<dt><span class="section"><a href="the_boost_pimpl_library/pimpl__null___and_strongly_exception_safe_constructors.html">Pimpl::null()
+    and Strongly Exception-Safe Constructors</a></span></dt>
 <dt><span class="section"><a href="the_boost_pimpl_library/applications_of_the_pimpl_idiom.html">Applications
     of the Pimpl Idiom</a></span></dt>
 <dd><dl>
@@ -77,7 +78,7 @@
       The <span class="emphasis"><em>Pimpl</em></span> idiom is a simple yet robust programming technique
       to minimize coupling via
     </p>
-<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
           the separation of public interface and private implementation and then
         </li>
@@ -87,17 +88,18 @@
 </ul></div>
 <p>
       Successfully popularized by Sutter (<a class="link" href="the_boost_pimpl_library/references.html#2">[2]</a>, <a class="link" href="the_boost_pimpl_library/references.html#3">[3]</a>)
-      under the cheeky <span class="emphasis"><em>Pimpl</em></span> name (as for "pointer to implementation")
-      the technique has been known long before under various names -- the Cheshire
-      Cat in <a class="link" href="the_boost_pimpl_library/references.html#4">[4]</a>, the Handle/Body in <a class="link" href="the_boost_pimpl_library/references.html#5">[5]</a>,
-      the Bridge in <a class="link" href="the_boost_pimpl_library/references.html#6">[6]</a> -- and conceptually deployed in
-      C and C++ as far back as at least early eighties (<a class="link" href="the_boost_pimpl_library/references.html#7">[7]</a>).
+      under the cheeky <span class="emphasis"><em>Pimpl</em></span> name (as for "pointer to implementation"
+      in Hungarian notation) the technique has been known long before under various
+      names -- the Cheshire Cat in <a class="link" href="the_boost_pimpl_library/references.html#4">[4]</a>, the Handle/Body
+      in <a class="link" href="the_boost_pimpl_library/references.html#5">[5]</a>, the Bridge in <a class="link" href="the_boost_pimpl_library/references.html#6">[6]</a>
+      -- and conceptually deployed in C and C++ as far back as at least early eighties
+      (<a class="link" href="the_boost_pimpl_library/references.html#7">[7]</a>).
     </p>
 <p>
       In the domain of commercial large-scale software development the following
       design principles come to the fore:
     </p>
-<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
           component-based, modular and API-centered design,
         </li>
@@ -131,7 +133,7 @@
 </div>
 </div>
 <table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
-<td align="left"><p><small>Last revised: April 14, 2014 at 04:07:48 GMT</small></p></td>
+<td align="left"><p><small>Last revised: April 18, 2014 at 23:00:49 GMT</small></p></td>
 <td align="right"><div class="copyright-footer"></div></td>
 </tr></table>
 <hr>
